@@ -112,7 +112,7 @@ body {
 }
 
 
-@media(width<640px){
+@media (min-width: 325px) and (max-width: 639px) {
 .inner {
     display: flex;
     flex-wrap: wrap;
@@ -127,5 +127,37 @@ body {
     width: calc(300px/3);
 }
 
+}
+
+@media(min-width:227px) and (max-width:324px){
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 206px;
+    width: 205px;
+    border: 2px solid black;
+}
+
+.cell {
+    border: 1px solid black;
+    height: calc(200px/3);
+    width: calc(200px/3);
+}
+}
+
+@media(width<227px){
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 181px;
+    width: 180px;
+    border: 2px solid black;
+}
+
+.cell {
+    border: 1px solid black;
+    height: calc(175px/3);
+    width: calc(175px/3);
+}
 }
 
