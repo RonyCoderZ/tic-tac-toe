@@ -1,31 +1,20 @@
 body {
-    background: linear-gradient(to right, #ADD8E6, #90EE90); /* Light blue to light green */
+    background: linear-gradient(to right, #ADD8E6, #90EE90);
+    /* Light blue to light green */
     /* Or try a diagonal gradient: */
     /* background: linear-gradient(45deg, #ADD8E6, #90EE90); */
     /* Or with multiple colors: */
     /* background: linear-gradient(to bottom, #f0f0f0, #e0e0e0, #d0d0d0); */
 }
+
 .outer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cell img{
+
+.cell img {
     transform: translateY(10px);
-}
-
-.inner {
-    display: flex;
-    flex-wrap: wrap;
-    height: 406px;
-    width: 405px;
-    border: 2px solid black;
-}
-
-.cell {
-    border: 1px solid black;
-    height: calc(400px/3);
-    width: calc(400px/3);
 }
 
 .btncontainer {
@@ -40,67 +29,90 @@ body {
     background-color: beige;
     font-weight: 500;
 }
+
 .glow-win {
-  animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from {
-    box-shadow: 0 0 20px 8px red;
-    background-color: rgba(255, 0, 0, 0.1);
-  }
-  to {
-    box-shadow: 0 0 30px 12px red;
-    background-color: rgba(255, 0, 0, 0.25);
-  }
+    from {
+        box-shadow: 0 0 20px 8px red;
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+
+    to {
+        box-shadow: 0 0 30px 12px red;
+        background-color: rgba(255, 0, 0, 0.25);
+    }
 }
+
 .cell {
-  position: relative;
-  z-index: 1;
-  background-color: white; /* or beige or something visible */
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    /* or beige or something visible */
 }
 
 .cell img {
-  z-index: 2;
-  position: relative;
-  pointer-events: none;
+    z-index: 2;
+    position: relative;
+    pointer-events: none;
 }
 
 .glow-win {
-  animation: glow 1s ease-in-out infinite alternate;
-  z-index: 3;
+    animation: glow 1s ease-in-out infinite alternate;
+    z-index: 3;
 }
+
 #restartBtn {
-    padding: 10px 25px; /* Increased padding for better clickability */
-    color: white; /* Changed text color for better contrast */
-    background-color: #4CAF50; /* A nice green for a positive action */
-    font-weight: 600; /* Made font a bit bolder */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Slightly rounded corners */
-    cursor: pointer; /* Indicate it's clickable */
-    font-size: 1.1em; /* Slightly larger text */
-    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions for hover/active */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 25px;
+    /* Increased padding for better clickability */
+    color: white;
+    /* Changed text color for better contrast */
+    background-color: #4CAF50;
+    /* A nice green for a positive action */
+    font-weight: 600;
+    /* Made font a bit bolder */
+    border: none;
+    /* Remove default border */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    cursor: pointer;
+    /* Indicate it's clickable */
+    font-size: 1.1em;
+    /* Slightly larger text */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    /* Smooth transitions for hover/active */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
 }
 
 /* Hover effect for the restart button */
 #restartBtn:hover {
-    background-color: #45a049; /* Darker green on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #45a049;
+    /* Darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    /* Slightly larger shadow on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
 }
 
 /* Active (click) effect for the restart button */
 #restartBtn:active {
-    background-color: #3e8e41; /* Even darker green when clicked */
-    transform: translateY(0); /* "Press down" effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow when pressed */
+    background-color: #3e8e41;
+    /* Even darker green when clicked */
+    transform: translateY(0);
+    /* "Press down" effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Smaller shadow when pressed */
 }
 
 /* Optional: Focus style for keyboard navigation */
 #restartBtn:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Custom focus ring */
+    outline: none;
+    /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+    /* Custom focus ring */
 }
 
 /* Your .btncontainer styles remain the same */
@@ -108,56 +120,71 @@ body {
     transform: translateY(10px);
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Added margin for separation */
+    margin-top: 20px;
+    /* Added margin for separation */
 }
 
+@media(min-width:640px) {
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        height: 406px;
+        width: 405px;
+        border: 2px solid black;
+    }
+
+    .cell {
+        border: 1px solid black;
+        height: calc(400px/3);
+        width: calc(400px/3);
+    }
+}
 
 @media (min-width: 325px) and (max-width: 639px) {
-.inner {
-    display: flex;
-    flex-wrap: wrap;
-    height: 306px;
-    width: 305px;
-    border: 2px solid black;
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        height: 306px;
+        width: 305px;
+        border: 2px solid black;
+    }
+
+    .cell {
+        border: 1px solid black;
+        height: calc(300px/3);
+        width: calc(300px/3);
+    }
+
 }
 
-.cell {
-    border: 1px solid black;
-    height: calc(300px/3);
-    width: calc(300px/3);
+@media(min-width:227px) and (max-width:324px) {
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        height: 206px;
+        width: 205px;
+        border: 2px solid black;
+    }
+
+    .cell {
+        border: 1px solid black;
+        height: calc(200px/3);
+        width: calc(200px/3);
+    }
 }
 
-}
+@media (max-width: 226px) {
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        height: 181px;
+        width: 180px;
+        border: 2px solid black;
+    }
 
-@media(min-width:227px) and (max-width:324px){
-.inner {
-    display: flex;
-    flex-wrap: wrap;
-    height: 206px;
-    width: 205px;
-    border: 2px solid black;
+    .cell {
+        border: 1px solid black;
+        height: calc(175px/3);
+        width: calc(175px/3);
+    }
 }
-
-.cell {
-    border: 1px solid black;
-    height: calc(200px/3);
-    width: calc(200px/3);
-}
-}
-
-@media(width<227px){
-.inner {
-    display: flex;
-    flex-wrap: wrap;
-    height: 181px;
-    width: 180px;
-    border: 2px solid black;
-}
-
-.cell {
-    border: 1px solid black;
-    height: calc(175px/3);
-    width: calc(175px/3);
-}
-}
-
